@@ -53,8 +53,8 @@ int main() {
         return -1;
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    unsigned int vertexShader = ShaderLoader::fromVertexFile("./triangleshader.glsl");
-    unsigned int fragmentShader = ShaderLoader::fromFragmentFile("./triangleshaderfrag.glsl");
+    unsigned int vertexShader = ShaderLoader::fromVertexFile("shaders/triangleshader.glsl");
+    unsigned int fragmentShader = ShaderLoader::fromFragmentFile("shaders/triangleshaderfrag.glsl");
 
     unsigned int shaderProgram;
     shaderProgram = glCreateProgram();
@@ -64,7 +64,7 @@ int main() {
     glLinkProgram(shaderProgram);
     glDeleteShader(fragmentShader);
 
-    unsigned int fragmentShader2 = ShaderLoader::fromFragmentFile("./triangleshaderfrag2.glsl");
+    unsigned int fragmentShader2 = ShaderLoader::fromFragmentFile("shaders/triangleshaderfrag.glsl");
 
     unsigned int shaderProgram2;
     shaderProgram2 = glCreateProgram();

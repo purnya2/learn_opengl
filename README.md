@@ -1,14 +1,15 @@
 # Learning OpenGL
 
 ## Setup
-Dependencies: Ensure GLFW is placed in the /external/ directory.
+Ensure **GLFW** is included in the `/external/` folder before building.
 
-Compilation:
-```sh
+## Compilation
+To compile the project, run the following commands from the directory of each project:
+
+```bash
 cd build
 cmake ..
 make
-```
 
 
 Projects :

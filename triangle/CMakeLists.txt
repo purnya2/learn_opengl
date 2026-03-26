@@ -23,3 +23,12 @@ target_link_libraries(main
     PRIVATE glfw
     PRIVATE OpenGL::GL
 )
+
+add_custom_command(
+    TARGET main POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E create_symlink
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/shaders"
+        "$<TARGET_FILE_DIR:main>/shaders"
+    COMMENT "Creating symlink to shader directory"
+    VERBATIM
+)
